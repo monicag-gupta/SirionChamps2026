@@ -16,3 +16,5 @@ Mypms1.zip : Create a SpringBoot JPA project for CRUD operation of Projects for 
               Emp(eid, ename)
               Skills(sName, eid)
               Team(eid, pid)
+              
+microservicesPrj.zip: This contains all the microservices
