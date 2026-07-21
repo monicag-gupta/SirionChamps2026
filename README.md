@@ -17,10 +17,12 @@ Mypms1.zip : Create a SpringBoot JPA project for CRUD operation of Projects for 
               Skills(sName, eid)
               Team(eid, pid)
               
-microservicesPrj.zip: This contains all the microservices.
-                     - **microservices-one and microservices-two : they are just examples done to learn microservices
-                     - **microservices-three : create
-                     - **microservices-four : read
-                     - **microservices-five : update
-                     - **microservices-six : delete
-                     - **microservices-seven : feign Client
+- **microservicesPrj.zip**: Contains all the project microservices.
+  - **microservices-one**: Example service created for learning.
+  - **microservices-two**: Example service created for learning.
+  - **microservices-three**: Create operation service.
+  - **microservices-four**: Read operation service.
+  - **microservices-five**: Update operation service.
+  - **microservices-six**: Delete operation service.
+  - **microservices-seven**: Feign Client integration service.
+
