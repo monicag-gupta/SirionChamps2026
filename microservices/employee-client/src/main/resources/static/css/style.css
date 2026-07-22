@@ -1,0 +1,164 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	font-family: "Segoe UI", Arial, sans-serif;
+	background: #eef1f5;
+	color: #222;
+	padding: 2rem 1rem;
+}
+
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+h1 {
+	color: #2c3e50;
+	text-align: center;
+}
+
+.subtitle {
+	text-align: center;
+	color: #666;
+	margin-top: -0.5rem;
+	margin-bottom: 2rem;
+	font-size: 0.9rem;
+}
+
+.card {
+	background: #fff;
+	padding: 1.5rem 2rem;
+	border-radius: 10px;
+	box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+	margin-bottom: 2rem;
+}
+
+.card h2 {
+	margin-top: 0;
+	font-size: 1.1rem;
+	color: #2c3e50;
+}
+
+.form-row {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1rem;
+}
+
+label {
+	display: block;
+	font-size: 0.8rem;
+	font-weight: 600;
+	color: #444;
+	margin-bottom: 0.25rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+	width: 100%;
+	padding: 0.55rem 0.7rem;
+	margin-bottom: 1rem;
+	border: 1px solid #d3d8e0;
+	border-radius: 6px;
+	font-size: 0.95rem;
+}
+
+input:focus {
+	outline: none;
+	border-color: #2f6fed;
+}
+
+.form-actions {
+	display: flex;
+	gap: 0.6rem;
+}
+
+button {
+	padding: 0.6rem 1.1rem;
+	border: none;
+	border-radius: 6px;
+	font-size: 0.9rem;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.btn-primary {
+	background: #2f6fed;
+	color: #fff;
+}
+
+.btn-primary:hover {
+	background: #244fb0;
+}
+
+.btn-secondary {
+	background: #e5e7eb;
+	color: #333;
+}
+
+.btn-secondary:hover {
+	background: #d1d5db;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	background: #fff;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+th, td {
+	padding: 0.75rem 1rem;
+	text-align: left;
+	border-bottom: 1px solid #eee;
+	font-size: 0.9rem;
+}
+
+th {
+	background: #f8f9fb;
+	color: #555;
+	font-size: 0.75rem;
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+}
+
+tr:last-child td {
+	border-bottom: none;
+}
+
+.row-actions button {
+	padding: 0.35rem 0.7rem;
+	font-size: 0.8rem;
+	margin-right: 0.4rem;
+}
+
+.btn-edit {
+	background: #fff3cd;
+	color: #8a6500;
+}
+
+.btn-edit:hover {
+	background: #ffe8a3;
+}
+
+.btn-delete {
+	background: #ffe0e0;
+	color: #b02a2a;
+}
+
+.btn-delete:hover {
+	background: #ffc9c9;
+}
+
+.empty-state {
+	text-align: center;
+	color: #888;
+	padding: 1.5rem;
+}
