@@ -1,0 +1,95 @@
+Q1) Write a Python class to convert an integer to a roman numeral and a roman numeral to an integer
+code: class RomanConverter:
+    def int_to_roman(self, num):
+        values = [
+            1000, 900, 500, 400,
+            100, 90, 50, 40,
+            10, 9, 5, 4, 1
+        ]
+        symbols = [
+            "M", "CM", "D", "CD",
+            "C", "XC", "L", "XL",
+            "X", "IX", "V", "IV", "I"
+        ]
+
+        roman = ""
+        for i in range(len(values)):
+            while num >= values[i]:
+                roman += symbols[i]
+                num -= values[i]
+        return roman
+
+    def roman_to_int(self, roman):
+        roman_dict = {
+            'I': 1, 'V': 5, 'X': 10,
+            'L': 50, 'C': 100,
+            'D': 500, 'M': 1000
+        }
+
+        total = 0
+        prev = 0
+
+        for char in reversed(roman):
+            value = roman_dict[char]
+            if value < prev:
+                total -= value
+            else:
+                total += value
+            prev = value
+
+        return total
+
+
+# Example
+converter = RomanConverter()
+
+print(converter.int_to_roman(58))      # LVIII
+print(converter.roman_to_int("LVIII")) # 58
+print(converter.int_to_roman(1994))    # MCMXCIV
+print(converter.roman_to_int("MCMXCIV")) # 1994
+
+
+
+
+2) 
+class ReverseWords:
+    def reverse(self, text):
+        words = text.split()
+        return " ".join(words[::-1])
+
+
+# Example
+obj = ReverseWords()
+
+input_string = "hello world"
+print("Input String :", input_string)
+print("Expected Output :", obj.reverse(input_string))
+
+
+
+
+
+3) 
+class Vehicle:
+    def __init__(self, seating_capacity):
+        self.seating_capacity = seating_capacity
+
+    def fare(self):
+        return self.seating_capacity * 100
+
+
+class Bus(Vehicle):
+    def __init__(self, seating_capacity=50):
+        super().__init__(seating_capacity)
+
+    def fare(self):
+        amount = super().fare()
+        maintenance_charge = amount * 0.10
+        total_fare = amount + maintenance_charge
+        return total_fare
+
+
+# Create Bus object
+school_bus = Bus()
+
+print("Total Bus fare is:", school_bus.fare())
