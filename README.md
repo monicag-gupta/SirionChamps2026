@@ -26,3 +26,18 @@ Mypms1.zip : Create a SpringBoot JPA project for CRUD operation of Projects for 
   - **microservices-six**: Delete operation service.
   - **microservices-seven**: Feign Client integration service.
 
+
+
+PythonExercise.zip:
+
+1)Write a Python class to convert an integer to a roman numeral and a roman numeral to an integer
+2)Write a Python class to reverse a string word by word.Input string : 'hello world'Expected Output : 'world hello'
+3)
+Create a Bus child class that inherits from the Vehicle class. 
+The default fare charge of any vehicle is seating capacity * 100. 
+If Vehicle is Bus instance, we need to add an extra 10% on full fare as a maintenance charge. 
+So total fare for bus instance will become the final amount = total fare + 10% of the total fare.
+Note: The bus seating capacity is 50. so the final fare amount should be 5550. 
+You need to override the fare() method of a Vehicle class in Bus class.
+Expected Output:
+Total Bus fare is: 5500.0
