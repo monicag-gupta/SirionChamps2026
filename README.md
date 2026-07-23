@@ -46,3 +46,31 @@ Add validation with spring-boot-starter-validation using annotations such as @No
               Exercise
               Create a list of emp dict so that get /emps gives the list and 
               post /emps/name/id adds the name and sal in the form of dict to the list
+
+
+- **FlaskExercise.py:**
+
+    Employee Information API
+    Create a Flask application that provides the following routes:
+    
+    Route
+    Method
+    Purpose
+    /
+    GET
+    Display the application name
+    /employees
+    GET
+    Display all employees
+    /employees/<employee_id>
+    GET
+    Display one employee
+    /employees
+    POST
+    Add a new employee
+    /search
+    GET
+    Search employees by department
+    /application-info
+    GET
+    Return a custom response
