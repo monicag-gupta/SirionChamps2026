@@ -1,11 +1,11 @@
-ExSpringWeb.zip : Contains solution for the problem statement : "Login Form submits to a controller, 
+- **ExSpringWeb.zip :** Contains solution for the problem statement : "Login Form submits to a controller, 
 which checks the credentials from a DB and returns Success page Or Error Page."
 
-Employee.zip : Contains solution for the problem statement : "Once this basic CRUD works, add more production-oriented features:
+- **Employee.zip :** Contains solution for the problem statement : "Once this basic CRUD works, add more production-oriented features:
 Use ResponseEntity<T> to return appropriate HTTP status codes (200 OK, 201 Created, 204 No Content, 404 Not Found). 
 Add validation with spring-boot-starter-validation using annotations such as @NotBlank, @Positive, and @Min. "
 
-Mypms1.zip : Create a SpringBoot JPA project for CRUD operation of Projects for Project Managers.
+- **Mypms1.zip :** Create a SpringBoot JPA project for CRUD operation of Projects for Project Managers.
               Features:
               1) CRUD through Postman
               2) JWT authentication
@@ -28,22 +28,21 @@ Mypms1.zip : Create a SpringBoot JPA project for CRUD operation of Projects for 
 
 
 
-PythonExercise.zip:
+- **PythonExercise.zip:**
 
-1)Write a Python class to convert an integer to a roman numeral and a roman numeral to an integer
-2)Write a Python class to reverse a string word by word.Input string : 'hello world'Expected Output : 'world hello'
-3)
-Create a Bus child class that inherits from the Vehicle class. 
-The default fare charge of any vehicle is seating capacity * 100. 
-If Vehicle is Bus instance, we need to add an extra 10% on full fare as a maintenance charge. 
-So total fare for bus instance will become the final amount = total fare + 10% of the total fare.
-Note: The bus seating capacity is 50. so the final fare amount should be 5550. 
-You need to override the fare() method of a Vehicle class in Bus class.
-Expected Output:
-Total Bus fare is: 5500.0
+    - Write a Python class to convert an integer to a roman numeral and a roman numeral to an integer
+    - Write a Python class to reverse a string word by word.Input string : 'hello world'Expected Output : 'world hello'
+    - Create a Bus child class that inherits from the Vehicle class. 
+    The default fare charge of any vehicle is seating capacity * 100. 
+    If Vehicle is Bus instance, we need to add an extra 10% on full fare as a maintenance charge. 
+    So total fare for bus instance will become the final amount = total fare + 10% of the total fare.
+    Note: The bus seating capacity is 50. so the final fare amount should be 5550. 
+    You need to override the fare() method of a Vehicle class in Bus class.
+    Expected Output:
+    Total Bus fare is: 5500.0
 
 
-flaskEg2.py:
+- **flaskEg2.py:**
               Exercise
               Create a list of emp dict so that get /emps gives the list and 
               post /emps/name/id adds the name and sal in the form of dict to the list
