@@ -44,11 +44,42 @@ def add_employee():
 def employee():
     return "Employee request received"
 
+# The path converter accepts text containing forward slashes.
+@app.route("/department/<path:department_name>")
+def department(department_name):
+    return f"Department: {department_name}"
+
+
+
+@app.route("/empl/<int:employee_id>")
+def employee_by_id(employee_id):
+    return f"Employee ID: {employee_id}"
+
+@app.route("/salary/<float:amount>")
+def salary(amount):
+    return f"Employee salary: {amount}"
+
 @app.post("/emps/<int:id>/<name>/<int:salary>")
 def add_employee_path(id, name, salary):
     new_employee = Employee(id=id, name=name, salary=salary)
     employees_db.append(new_employee)
     return jsonify(new_employee.to_dict()), 201
+
+@app.get("/emps/search")
+def search_employees():
+    name = request.args.get("name")
+    id_param = request.args.get("id")
+    salary_param = request.args.get("salary")
+
+    results = employees_db
+    if name:
+        results = [e for e in results if name.lower() in e.name.lower()]
+    if id_param:
+        results = [e for e in results if e.id == int(id_param)]
+    if salary_param:
+        results = [e for e in results if e.salary == float(salary_param)]
+
+    return jsonify([e.to_dict() for e in results])
 
 
 
