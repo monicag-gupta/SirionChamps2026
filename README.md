@@ -41,3 +41,9 @@ Note: The bus seating capacity is 50. so the final fare amount should be 5550.
 You need to override the fare() method of a Vehicle class in Bus class.
 Expected Output:
 Total Bus fare is: 5500.0
+
+
+flaskEg2.py:
+              Exercise
+              Create a list of emp dict so that get /emps gives the list and 
+              post /emps/name/id adds the name and sal in the form of dict to the list
