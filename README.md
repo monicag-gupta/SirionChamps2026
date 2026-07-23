@@ -64,7 +64,7 @@ Add validation with spring-boot-starter-validation using annotations such as @No
      Use Flask API Integration with MySQL, replacing the temporary list or text-file storage in the earlier Course CRUD API with permanent database storage.
 
 
-- **main.py:**
+- **FastAPIExercise.py:**
 Employee Information API
 Create a FastAPI application that provides the following routes:
   - / : GET : Display the application name
