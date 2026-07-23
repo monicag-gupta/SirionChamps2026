@@ -29,5 +29,15 @@ def add_emp(name, sal):
         "employees": emps
     }), 201
 
+@app.route("/search", methods=["GET"])
+def search():
+    name = request.args.get("name")
+
+    for emp in emps:
+        if emp["name"].lower() == name.lower():
+            return jsonify(emp)
+
+    return jsonify({"message": "Employee not found"}), 404
+
 if __name__ == "__main__":
     app.run(debug=True)
