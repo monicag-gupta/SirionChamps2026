@@ -74,3 +74,7 @@ Add validation with spring-boot-starter-validation using annotations such as @No
     /application-info
     GET
     Return a custom response
+
+
+  - **FlaskMySQLExercise.py:**
+     Use Flask API Integration with MySQL, replacing the temporary list or text-file storage in the earlier Course CRUD API with permanent database storage.
