@@ -53,12 +53,12 @@ Add validation with spring-boot-starter-validation using annotations such as @No
     Employee Information API
     Create a Flask application that provides the following routes:
     
-    / : GET Display the application name
-    /employees : GET Display all employees
-    /employees/<employee_id> : GET Display one employee
-    /employees : POST Add a new employee
-    /search : GET Search employees by department
-    /application-info : GET Return a custom response
+  -  / : GET Display the application name
+  - /employees : GET Display all employees
+  -  /employees/<employee_id> : GET Display one employee
+  -  /employees : POST Add a new employee
+  -  /search : GET Search employees by department
+  -  /application-info : GET Return a custom response
 
 - **FlaskMySQLExercise.py:**
      Use Flask API Integration with MySQL, replacing the temporary list or text-file storage in the earlier Course CRUD API with permanent database storage.
