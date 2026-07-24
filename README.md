@@ -97,4 +97,4 @@ Return the result in a structured table.
 Finish with an executive summary of no more than 150 words.
 
 - **PromptExercise1.docx:**
-  This is one of the class exercise of prompt eng.
+  This is one of the exercise of prompt eng.
