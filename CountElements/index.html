@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DOM Analyzer</title>
+
+<style>
+body{
+    background:#f5f5f5;
+    color:#222;
+}
+
+.box{
+    background:lightblue;
+    color:red;
+    padding:10px;
+    margin:10px;
+}
+
+.green{
+    background:lightgreen;
+}
+
+table{
+    border-collapse:collapse;
+}
+
+table,th,td{
+    border:1px solid black;
+    padding:8px;
+}
+
+img{
+    width:120px;
+}
+</style>
+
+</head>
+<body>
+
+<h1>DOM Analyzer Demo</h1>
+
+<h2>Section 1</h2>
+
+<p class="box">
+Lorem ipsum dolor sit amet.
+</p>
+
+<p class="green">
+Another paragraph.
+</p>
+
+<div class="box">
+This is a div.
+</div>
+
+<div>
+Another div
+</div>
+
+<img src="https://picsum.photos/200" alt="">
+<img src="https://picsum.photos/201" alt="">
+<img src="https://picsum.photos/202" alt="">
+
+<hr>
+
+<form>
+
+<input type="text">
+
+<input type="email">
+
+<input type="password">
+
+<select>
+<option>A</option>
+<option>B</option>
+</select>
+
+<textarea></textarea>
+
+<button>Submit</button>
+
+</form>
+
+<hr>
+
+<table>
+
+<tr>
+<th>ID</th>
+<th>Name</th>
+</tr>
+
+<tr>
+<td>101</td>
+<td>John</td>
+</tr>
+
+<tr>
+<td>102</td>
+<td>Alice</td>
+</tr>
+
+</table>
+
+<br>
+
+<table>
+
+<tr>
+<th>Course</th>
+<th>Fees</th>
+</tr>
+
+<tr>
+<td>AI</td>
+<td>1000</td>
+</tr>
+
+</table>
+
+<hr>
+
+<ul>
+
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+
+</ul>
+
+<ol>
+
+<li>Apple</li>
+<li>Mango</li>
+
+</ol>
+
+<a href="#">Home</a>
+
+<a href="#">About</a>
+
+<a href="#">Contact</a>
+
+<h3>Statistics</h3>
+
+<pre id="output"></pre>
+
+<script src="script.js"></script>
+
+</body>
+</html>
