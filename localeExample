@@ -1,0 +1,144 @@
+package com.example.clientinfo.dto;
+
+public record ClientInfoRequest(
+        Double latitude,
+        Double longitude
+) {}
+
+
+package com.example.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class PromtEngApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(PromtEngApplication.class, args);
+	}
+
+}
+
+package com.example.demo.controller;
+
+import com.example.clientinfo.dto.ClientInfoRequest;
+import jakarta.servlet.http.HttpServletRequest;
+import org.springframework.context.MessageSource;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Locale;
+import java.util.Map;
+
+@RestController
+public class ClientInfoController {
+
+    private final MessageSource messageSource;
+
+    public ClientInfoController(MessageSource messageSource) {
+        this.messageSource = messageSource;
+    }
+
+    @PostMapping("/client-info")
+    public Map<String, Object> getClientInfo(
+            @RequestBody ClientInfoRequest request,
+            HttpServletRequest httpRequest
+    ) {
+
+        Locale locale = httpRequest.getLocale();
+
+//        String message = messageSource.getMessage(
+//                "welcome.message",
+//                null,
+//                locale
+//        );
+        String message = messageSource.getMessage(
+                "welcome.message",
+                null,
+                "Welcome",
+                httpRequest.getLocale()
+        );
+
+        return Map.of(
+                "ipAddress", httpRequest.getRemoteAddr(),
+                "latitude", request.latitude(),
+                "longitude", request.longitude(),
+                "locale", locale.toLanguageTag(),
+                "message", message
+        );
+    }
+}
+
+
+
+
+
+
+
+
+package com.example.demo.dto;
+
+public record ClientInfoResponse(
+        String message,
+        String ipAddress,
+        Double latitude,
+        Double longitude,
+        String locale
+) {
+}
+
+
+
+--prompt--
+I want to build a minimal Spring Boot service that returns client information whenever it is called from the frontend. Keep the implementation as simple as possible with minimal code. Do not over-engineer the solution.
+
+Requirements
+
+Create a single REST endpoint:
+
+GET /client-info
+
+or
+
+POST /client-info
+
+(if POST is required for latitude and longitude).
+
+The service should return:
+
+Client IP address
+Latitude
+Longitude
+Browser locale
+Implementation Guidelines
+Use Spring Boot 3.x and Java 17.
+Keep the project structure minimal:
+Controller
+Service (only if necessary)
+DTO
+Retrieve:
+IP address from HttpServletRequest.
+Locale from the Accept-Language header.
+Explain that latitude and longitude cannot be obtained directly from the backend and must be sent by the frontend using the browser's Geolocation API.
+The frontend should:
+Request the user's location.
+Call the Spring Boot endpoint with latitude and longitude.
+
+Return a JSON response containing:
+
+{
+  "ipAddress": "...",
+  "latitude": ...,
+  "longitude": ...,
+  "locale": "..."
+}//also i need to change the response with change in locale provide me minimal code
+
+
+---messages--
+
+src/main/resources
+│
+├── messages.properties
+├── messages_fr.properties
+└── messages_hi.properties
+
