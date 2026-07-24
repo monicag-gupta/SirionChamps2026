@@ -73,3 +73,7 @@ Create a FastAPI application that provides the following routes:
   - /employees : POST : Add a new employee
   - /search : GET : Search employees by department
   - /application-info : GET : Return a custom response
+ 
+
+- **client-info-service.zip:**
+  This programs fetches the client IP, Geo-Location and Locale. After this it loads a welcome message using locale and resource bundle.
