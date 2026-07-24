@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Info</title>
+</head>
+<body>
+  <h1>Check the browser console (F12) for your info.</h1>
+
+  <script>
+    fetch('/info')
+      .then(response => response.json())
+      .then(data => {
+        console.log('IP:', data.ip);
+        console.log('Locale:', data.locale);
+        console.log('Lat:', data.lat);
+        console.log('Lon:', data.lon);
+        console.log('Message:', data.message);
+        console.log('Full response:', data);
+      })
+      .catch(err => console.error('Failed to fetch /info:', err));
+  </script>
+</body>
+</html>
