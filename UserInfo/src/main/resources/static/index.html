@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Info</title>
+</head>
+<body>
+
+<h2>Collecting User Information...</h2>
+
+<script>
+
+navigator.geolocation.getCurrentPosition(
+
+function(position){
+
+    fetch("/location",{
+
+        method:"POST",
+
+        headers:{
+            "Content-Type":"application/json"
+        },
+
+        body:JSON.stringify({
+
+            latitude:position.coords.latitude,
+            longitude:position.coords.longitude
+
+        })
+
+    })
+    .then(res=>res.json())
+    .then(data=>{
+
+        document.body.innerHTML += "<pre>"+JSON.stringify(data,null,4)+"</pre>";
+
+    });
+
+},
+
+function(error){
+
+    alert("Location Permission Denied");
+
+}
+
+);
+
+</script>
+
+</body>
+</html>

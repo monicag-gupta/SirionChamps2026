@@ -1,0 +1,30 @@
+<select id="word">
+    <option value="welcome">Welcome</option>
+    <option value="apple">Apple</option>
+    <option value="banana">Banana</option>
+    <option value="car">Car</option>
+</select>
+
+<button onclick="translateWord()">
+    Translate
+</button>
+
+<h2 id="result"></h2>
+
+<script>
+
+function translateWord(){
+
+    let word=document.getElementById("word").value;
+
+    fetch("/translate?word="+word)
+    .then(r=>r.text())
+    .then(text=>{
+
+        document.getElementById("result").innerHTML=text;
+
+    });
+
+}
+
+</script>
