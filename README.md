@@ -79,4 +79,22 @@ Create a FastAPI application that provides the following routes:
   This programs fetches the client IP, Geo-Location and Locale. After this it loads a welcome message using locale and resource bundle.
 
 - **PythonLibUsingJava.zip:**
-  This zip contains a python library made using java which has the following functionality that the folder in which this library is called then it   prints the all files present in that folder.
+  This zip contains a python library made using java which has the following functionality that the folder in which this library is called then it prints the all files present in that folder.
+
+- **PromptCapstoneExercise.docx:**
+  This is the one of the class exercise : A training organization has collected feedback from 100 learners after a project management course. Management wants to understand satisfaction levels, major concerns and improvement priorities.
+Learner Task
+Create a prompt that instructs ChatGPT to:
+Act as a training quality analyst.
+Analyze the supplied learner feedback.
+Group the feedback into themes.
+Classify each theme as Positive, Negative or Mixed.
+Identify frequency and business impact.
+Include representative comments.
+Recommend corrective actions.
+Avoid inventing data.
+Return the result in a structured table.
+Finish with an executive summary of no more than 150 words.
+
+- **PromptExercise1.docx:**
+  This is one of the class exercise of prompt eng.
