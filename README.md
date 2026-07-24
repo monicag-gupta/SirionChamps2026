@@ -79,4 +79,4 @@ Create a FastAPI application that provides the following routes:
   This programs fetches the client IP, Geo-Location and Locale. After this it loads a welcome message using locale and resource bundle.
 
 - **PythonLibUsingJava.zip:**
-  This zip contains a python library using java which has the following functionality that the folder in which this library is called then it   prints the all files present in that folder.
+  This zip contains a python library made using java which has the following functionality that the folder in which this library is called then it   prints the all files present in that folder.
